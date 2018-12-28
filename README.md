@@ -1,2 +1,2 @@
 # PyDSA
-Udemy
+Udemy - Data structures and algorithms course

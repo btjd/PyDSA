@@ -10,4 +10,4 @@ def isValidBST(root):
                 return _isValidBST(root.left, minim, root.val) and _isValidBST(root.right, root.val, maxim)
             else:
                 return False
-        return _isValidBST(root, float('-inf'), float('inf'))
+    return _isValidBST(root, float('-inf'), float('inf'))

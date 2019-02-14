@@ -1,3 +1,5 @@
+import pytest
+
 def anagram(s1,s2):
     buff = {}
     s1_list = list(s1)
@@ -30,7 +32,11 @@ class AnagramTest(object):
         assert sol('hi man','hi     man') is True
         assert sol('aabbcc','aabbc') is False
         assert sol('123','1 2') is False
+<<<<<<< HEAD
         # assert sol('aa', 'bb') is False
+=======
+        # assert sol('ggg', 'ooo') is False
+>>>>>>> 117e09798deb4d023eb73753114ed379c4cb9fff
         print "ALL TEST CASES PASSED"
 
 # Run Tests

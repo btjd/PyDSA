@@ -1,16 +1,16 @@
-def large_cont_sum(arr):
-    lcs = s = arr[0]
-    for item in arr[1:]:
-        if (s + item) > item:
-            s += item
+def lcs(arr):
+    curr_sum = arr[0]
+    max_sum = float('-inf')
+    i = 1
+    while i < len(arr):
+        if arr[i] > curr_sum + arr[i]:
+            curr_sum = arr[i]
         else:
-            s = item
-        if lcs < s:
-            lcs = s
-        print s, lcs
-    return lcs
-
-
+            curr_sum += arr[i]
+        if max_sum < curr_sum:
+            max_sum = curr_sum
+        i += 1
+    return max_sum
 
 class LargeContTest(object):
     def test(self,sol):
@@ -22,4 +22,4 @@ class LargeContTest(object):
         
 #Run Test
 t = LargeContTest()
-t.test(large_cont_sum)
+t.test(lcs)
